@@ -2,8 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Sep 12 14:37:06 2018
-
-@author: patricio
+@author: Patricio Araneda
 """
 import sys, getopt
 import csv
@@ -12,10 +11,8 @@ import json
 csv_file = '/Users/patricio/Downloads/DATOS_MINIMOS.csv'
 json_file = 'data.json'
 
-#fake = Faker()
-MAX_RANGE = 100
-datetime_end = datetime.datetime.now()
-datetime_start = datetime_end - datetime.timedelta(days=365)
+#datetime_end = datetime.datetime.now()
+#datetime_start = datetime_end - datetime.timedelta(days=365)
 
 #Get Command Line Arguments
 def main(argv):
