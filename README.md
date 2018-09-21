@@ -19,7 +19,7 @@ The json file contains a line for each record without comma separation.
 ```
 {"id":"DIR","nombre":"Director","detalle":"Director de Laboratorio"}
 {"id":"LBM","nombre":"Lab. Manager","detalle":"Administrador de Laboratorio"}
-{"id":"LAB","nombre":"Chilegenomico","detalle":"Personal de Laboratorio"}
+{"id":"LAB","nombre":"Laboratorio","detalle":"Personal de Laboratorio"}
 {"id":"USR","nombre":"Usuario Externo","detalle":"Usuario externo"}
 {"id":"INV","nombre":"Usuario","detalle":"Investigador asociado a un proyecto"}
 ```
