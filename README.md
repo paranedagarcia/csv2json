@@ -23,4 +23,7 @@ The json file contains a line for each record without comma separation.
 {"id":"USR","nombre":"Usuario Externo","detalle":"Usuario externo"}
 {"id":"INV","nombre":"Usuario","detalle":"Investigador asociado a un proyecto"}
 ```
-To import this file to PostgreSQL jsonb field use  https://github.com/lukasmartinelli/pgfutter.
+To import this file to PostgreSQL jsonb field use:
+```
+cat file.json | psql -h localhost -p 5432 database -c "COPY table (jsonb_field) FROM STDIN;"
+```
