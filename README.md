@@ -15,7 +15,7 @@ The command line must be:
 ```
 csv2json.py -i file_csv -o file.json
 ```
-The json file contains one file for each record no comma separate.
+The json file contains a line for each record without comma separation.
 ```
 {"id":"DIR","nombre":"Director","detalle":"Director de Laboratorio"}
 {"id":"LBM","nombre":"Lab. Manager","detalle":"Administrador de Laboratorio"}
@@ -23,4 +23,4 @@ The json file contains one file for each record no comma separate.
 {"id":"USR","nombre":"Usuario Externo","detalle":"Usuario externo"}
 {"id":"INV","nombre":"Usuario","detalle":"Investigador asociado a un proyecto"}
 ```
-To import this file to PostgreSQL use  https://github.com/lukasmartinelli/pgfutter.
+To import this file to PostgreSQL jsonb field use  https://github.com/lukasmartinelli/pgfutter.
