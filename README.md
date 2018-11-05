@@ -25,5 +25,5 @@ The json file contains a line for each record without comma separation.
 ```
 To import this file into PostgreSQL jsonb field use:
 ```
-cat file.json | psql -h localhost -p 5432 database -c "COPY table (jsonb_field) FROM STDIN;"
+cat file.json | psql --username=user --password -h localhost -p 5432 database -c "COPY table (jsonb_field) FROM STDIN;"
 ```
