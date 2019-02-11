@@ -1,6 +1,8 @@
 # csv2json
 Pyhton command line program to convert csv files into json files, one line for record aka Mongodb format. This format is required to import to PostgreSQL jsonb field.
 
+[![DOI](https://zenodo.org/badge/149786445.svg)](https://zenodo.org/badge/latestdoi/149786445)
+
 ## How to use
 Make csv2json.py executable with:
 ```
