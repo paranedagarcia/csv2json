@@ -3,16 +3,21 @@
 """
 Created on Wed Sep 12 14:37:06 2018
 @author: Patricio Araneda
+
+conn = psycopg2.connect(database='NHL', user='postgres', password='postgres', host='localhost', port='5432')
+
+cat file.json | psql --username=user --password -h localhost -p 5432 database -c "COPY table (jsonb_field) FROM STDIN;"
 """
+
 import sys, getopt
 import csv
 import json
+#import requests
+#import psycopg2
 
 csv_file = '/Users/patricio/Downloads/DATOS_MINIMOS.csv'
 json_file = 'data.json'
 
-#datetime_end = datetime.datetime.now()
-#datetime_start = datetime_end - datetime.timedelta(days=365)
 
 #Get Command Line Arguments
 def main(argv):
@@ -26,7 +31,7 @@ def main(argv):
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
-            print('csv_json.py -i <path to inputfile> -o <path to outputfile> ')
+            print('csv2json.py -i <path to inputfile> -o <path to outputfile> ')
             sys.exit()
         elif opt in ("-i", "--ifile"):
             csv_file = arg
@@ -39,6 +44,7 @@ def main(argv):
 def read_CSV(csv_file, json_file):
     #csv_rows = []
     with open(csv_file) as csvfile:
+    	#reader = csv.reader(csvfile, delimiter=';', quoting=csv.QUOTE_ALL)
         reader = csv.DictReader(csvfile)
         field = reader.fieldnames
         with open(json_file, 'w') as f:
